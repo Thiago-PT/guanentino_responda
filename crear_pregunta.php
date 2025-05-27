@@ -12,6 +12,7 @@
     {
         $nombre_usuario = $_SESSION['username'];
     }
+    $_SESSION['tipo_usuario'] = 'admin'; // o 'digitador'
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +97,6 @@
         <input type="url" name="path_pregunta" id="" >
         <br><br>
         <?php
-    // ...código existente...
         if(isset($_SESSION['username'])) {
             echo '<input type="hidden" name="id_digitador" value="'.htmlspecialchars($_SESSION['username']).'">';
             echo '<p>Digitador: <strong>'.htmlspecialchars($_SESSION['username']).'</strong></p>';

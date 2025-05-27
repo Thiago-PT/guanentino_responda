@@ -1,5 +1,8 @@
 <?php
 // filepath: c:\xampp\htdocs\guanentino_responda\crear_opciones.php
+session_start();
+$_SESSION['tipo_usuario'] = 'admin'; // o 'digitador'
+
 $id_pregunta = isset($_GET['id_pregunta']) ? intval($_GET['id_pregunta']) : 0;
 if ($id_pregunta <= 0) {
     die("ID de pregunta no válido.");

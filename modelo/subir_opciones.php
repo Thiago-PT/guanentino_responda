@@ -2,6 +2,17 @@
 // filepath: c:\xampp\htdocs\guanentino_responda\modelo\subir_opciones.php
 require "conexion.php";
 
+session_start();
+$tipo_usuario = isset($_SESSION['tipo_usuario']) ? $_SESSION['tipo_usuario'] : '';
+
+if ($tipo_usuario === 'admin') {
+    $home = '../home_admin.php';
+} elseif ($tipo_usuario === 'digitador') {
+    $home = '../home_digitador.php';
+} else {
+    $home = '../index.php';
+}
+
 $id_pregunta = intval($_POST['id_pregunta']);
 $textos = $_POST['texto'];
 $justificaciones = $_POST['justificacion'];
@@ -37,7 +48,7 @@ $conexion->close();
 
 echo "<script>
     alert('Opciones registradas correctamente.');
-    window.location.href = '../home_admin.php';
+    window.location.href = '$home';
 </script>";
 exit();
 ?>
