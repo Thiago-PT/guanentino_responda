@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <h1 style="color: blueviolet; font-family: 'Times New Roman'; font-size: short;">Néstor Paéz ama linux</h1>
+        <h1 style="color: blueviolet; font-family: 'Times New Roman'; font-size: short;">Working!</h1>
     </center>
 </body>
 </html>

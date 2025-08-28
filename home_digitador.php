@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <h1 style="color: blueviolet; font-family: 'Times New Roman'; font-size";>Como digitador, aquí puedes subir una pregunta</h1>
+        <h1 style="color: blueviolet; font-family: 'Times New Roman'; ";>Como digitador, aquí puedes subir una pregunta</h1>
         <a href="crear_pregunta.php">
             <button type = "submit">Registrar una nueva pregunta</button>
         </a>
