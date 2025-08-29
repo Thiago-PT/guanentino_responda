@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-08-2025 a las 01:49:06
+-- Tiempo de generación: 29-08-2025 a las 02:03:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -39,8 +39,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `email`, `contraseña`, `nombre`) VALUES
-(2, 'npaez@gmail.com', '$2y$10$h3/NJt9FeSv0vgqHOc4PV.g3qvbu7TSJSWFqgHf1q1W5NTsah1mhu', 'Nestor paez'),
-(3, 'edwinplata@colegioguanenta.edu.co', '$2y$10$9M/zR8QmVe7caMz02uCgb.wvQ0s/UqFBxYZR92qZEdpyedb/pQ9xO', 'Edwin Santiago Plata Torrado');
+(2, 'npaez@gmail.com', '1234', 'Nestor paez'),
+(3, 'edwinplata@colegioguanenta.edu.co', '$2y$10$9M/zR8QmVe7caMz02uCgb.wvQ0s/UqFBxYZR92qZEdpyedb/pQ9xO', 'Edwin Santiago Plata Torrado'),
+(4, 'admin@gmail.com', '1234', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,6 @@ CREATE TABLE `digitador` (
 
 INSERT INTO `digitador` (`id_digitador`, `email`, `contraseña`, `nombre`) VALUES
 (1, 'edwinplata@colegioguanenta.edu.co', '1234', 'Edwin Santiago Plata Torrado'),
-(3, 'rosamelan@colegioguanenta.edu.co', '$2y$10$59tWnbZI6Ovu41mx36sO4OHiVeg1ULP43TjrMb4UYQJPumtCdRftm', 'Rosa Melano'),
 (4, 'npaez@gmail.com', '$2y$10$IdFA/ihtQKnWk1Apu7sD8OkyPI0/RJOxQ4t8XYjp7eMkK0ZhJIXgu', 'Nestor paez'),
 (5, 'bflorez@colegioguanenta.edu.co', '$2y$10$vOqQ1HhhMLFDS7ykYMJWf.0sjJIJp0D8nNy8AZNG2TrjdwpxNFRAW', 'Bianny');
 
@@ -112,7 +112,6 @@ INSERT INTO `docente` (`id_docente`, `email`, `contraseña`, `nombre`) VALUES
 (3, 'keinerromero@colegioguanenta.edu.co', 'kromero2025', 'Keiner Romero'),
 (4, 'sarithfigueredo@colegioguanenta.edu.co', 'sfigueredo2025', 'Sarith Figueredo'),
 (5, 'joségarces@colegioguaneta.edu.co', 'jgarces2025', 'José Garces'),
-(6, 'rosamelan@colegioguanenta.edu.co', '$2y$10$/Aq0aUtiau91MqzBhN9KzeGfH8JpURzKrl9GyQXW4UZvjJ1xV2s5m', 'Rosa Melano'),
 (7, 'bflorez@colegioguanenta.edu.co', '$2y$10$QxSp6ZN..IvYM9EUR0rtmOmE9dqBL1USi9RIyNG9ejRuXgGsCP6za', 'Bianny');
 
 -- --------------------------------------------------------
@@ -127,13 +126,6 @@ CREATE TABLE `docente_grupo_asignaturas` (
   `id_grupo` int(11) NOT NULL,
   `year` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `docente_grupo_asignaturas`
---
-
-INSERT INTO `docente_grupo_asignaturas` (`id_asignatura`, `id_docente`, `id_grupo`, `year`) VALUES
-(3, 6, 3, 2025);
 
 -- --------------------------------------------------------
 
@@ -460,7 +452,7 @@ ALTER TABLE `respuesta`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `asignaturas`
